@@ -1,4 +1,2 @@
-print ("HEY")
-print("BYE")
-print ("HEYOOO")
-print("WASSSUP")
+# Write a function that returns the most common letter in a string.
+print ("HI")
