@@ -1,16 +1,10 @@
 # Write a function that returns the most common letter in a string.
-def finding_common_letter():
-    sentence = input("Give me a sentence: ")
-    detecting_letters = [char.lower() for char in sentence if char.isalpha()]
-    
-    if not detecting_letters:
-        return "No letters found in the sentence."
-    
-    counting_letters = {}
-    for letter in detecting_letters:
-        counting_letters[letter] = counting_letters.get(letter, 0) + 1
-        
-    most_common = max(counting_letters, key=counting_letters.get)   
-    return f"The most common letter is '{most_common}' with {counting_letters[most_common]} occurrences."
+def common_letter(string):
+    most = ""
+    for letter in string:
+        if most == "" or string.count(letter) > string.count(most):
+            most = letter
+    return most
 
-print(finding_common_letter())
+string = input("Enter a String: ")
+print(common_letter(string))
